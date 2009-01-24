@@ -10,4 +10,11 @@
 
 @implementation PreferencePaneController
 
+- (IBAction)startLauchService:(id)sender
+{
+	NSTask *serviceTask = [[NSTask alloc] init];
+	[serviceTask setLaunchPath:@"/Users/Jelle/Documents/Application Development/LazyPoken/build/Debug/Script"];
+	[serviceTask launch];
+}
+
 @end

@@ -10,6 +10,11 @@
 		60E01B7C0F2B798100931EF9 /* PreferencePane.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60E01B7B0F2B798100931EF9 /* PreferencePane.xib */; };
 		60E01B800F2B79E200931EF9 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E01B7F0F2B79E200931EF9 /* PreferencePanes.framework */; };
 		60E01B830F2B79F600931EF9 /* PreferencePaneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E01B820F2B79F600931EF9 /* PreferencePaneController.m */; };
+		60E01C160F2B81F900931EF9 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E01C150F2B81F900931EF9 /* CoreServices.framework */; };
+		60E01C230F2B82FB00931EF9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E01C220F2B82FB00931EF9 /* Foundation.framework */; };
+		60E01C300F2B843700931EF9 /* LazyPokenLauncher.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E01C2F0F2B843700931EF9 /* LazyPokenLauncher.m */; };
+		60E01C3D0F2B86EB00931EF9 /* hand.icns in Resources */ = {isa = PBXBuildFile; fileRef = 60E01C3C0F2B86EB00931EF9 /* hand.icns */; };
+		60E01C7A0F2B8A9000931EF9 /* LaunchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E01C790F2B8A9000931EF9 /* LaunchController.m */; };
 		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -24,12 +29,31 @@
 		60E01B7F0F2B79E200931EF9 /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = /System/Library/Frameworks/PreferencePanes.framework; sourceTree = "<absolute>"; };
 		60E01B810F2B79F600931EF9 /* PreferencePaneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PreferencePaneController.h; path = classes/PreferencePaneController.h; sourceTree = "<group>"; };
 		60E01B820F2B79F600931EF9 /* PreferencePaneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreferencePaneController.m; path = classes/PreferencePaneController.m; sourceTree = "<group>"; };
+		60E01BBB0F2B7E1800931EF9 /* Script */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = Script; path = "/Users/Jelle/Documents/Application Development/LazyPoken/build/Debug/Script"; sourceTree = "<absolute>"; wrapsLines = 0; };
+		60E01BE30F2B7FB800931EF9 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		60E01BE80F2B800800931EF9 /* SSYLoginItems */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SSYLoginItems; path = classes/SSYLoginItems; sourceTree = "<group>"; };
+		60E01C130F2B81F900931EF9 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		60E01C150F2B81F900931EF9 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		60E01C220F2B82FB00931EF9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		60E01C2F0F2B843700931EF9 /* LazyPokenLauncher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LazyPokenLauncher.m; path = classes/LazyPokenLauncher.m; sourceTree = "<group>"; };
+		60E01C3C0F2B86EB00931EF9 /* hand.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = hand.icns; path = resources/hand.icns; sourceTree = "<group>"; };
+		60E01C780F2B8A9000931EF9 /* LaunchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LaunchController.h; path = classes/LaunchController.h; sourceTree = "<group>"; };
+		60E01C790F2B8A9000931EF9 /* LaunchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LaunchController.m; path = classes/LaunchController.m; sourceTree = "<group>"; };
 		8D5B49B6048680CD000E48DA /* LazyPoken.prefpane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyPoken.prefpane; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		60E01BB90F2B7E1800931EF9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60E01C160F2B81F900931EF9 /* CoreServices.framework in Frameworks */,
+				60E01C230F2B82FB00931EF9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D5B49B3048680CD000E48DA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -51,6 +75,10 @@
 				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
 				19C28FB8FE9D52D311CA2CBB /* Products */,
 				60E01B7B0F2B798100931EF9 /* PreferencePane.xib */,
+				60E01BE30F2B7FB800931EF9 /* Cocoa.framework */,
+				60E01C130F2B81F900931EF9 /* CoreFoundation.framework */,
+				60E01C150F2B81F900931EF9 /* CoreServices.framework */,
+				60E01C220F2B82FB00931EF9 /* Foundation.framework */,
 			);
 			name = LazyPoken;
 			sourceTree = "<group>";
@@ -67,6 +95,7 @@
 		089C167CFE841241C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				60E01C3C0F2B86EB00931EF9 /* hand.icns */,
 				8D5B49B7048680CD000E48DA /* Info.plist */,
 				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
 			);
@@ -76,8 +105,11 @@
 		08FB77AFFE84173DC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				60E01BE80F2B800800931EF9 /* SSYLoginItems */,
 				60E01B810F2B79F600931EF9 /* PreferencePaneController.h */,
 				60E01B820F2B79F600931EF9 /* PreferencePaneController.m */,
+				60E01C780F2B8A9000931EF9 /* LaunchController.h */,
+				60E01C790F2B8A9000931EF9 /* LaunchController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -113,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				32DBCF630370AF2F00C91783 /* LazyPoken_Prefix.pch */,
+				60E01C2F0F2B843700931EF9 /* LazyPokenLauncher.m */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -120,9 +153,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8D5B49AC048680CD000E48DA /* LazyPoken */ = {
+		60E01BBA0F2B7E1800931EF9 /* Script */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "LazyPoken" */;
+			buildConfigurationList = 60E01BCD0F2B7E3800931EF9 /* Build configuration list for PBXNativeTarget "Script" */;
+			buildPhases = (
+				60E01BB80F2B7E1800931EF9 /* Sources */,
+				60E01BB90F2B7E1800931EF9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Script;
+			productName = Script;
+			productReference = 60E01BBB0F2B7E1800931EF9 /* Script */;
+			productType = "com.apple.product-type.tool";
+		};
+		8D5B49AC048680CD000E48DA /* Preference Pane */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "Preference Pane" */;
 			buildPhases = (
 				8D5B49AF048680CD000E48DA /* Resources */,
 				8D5B49B1048680CD000E48DA /* Sources */,
@@ -132,7 +181,7 @@
 			);
 			dependencies = (
 			);
-			name = LazyPoken;
+			name = "Preference Pane";
 			productInstallPath = "$(HOME)/Library/Bundles";
 			productName = LazyPoken;
 			productReference = 8D5B49B6048680CD000E48DA /* LazyPoken.prefpane */;
@@ -150,7 +199,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8D5B49AC048680CD000E48DA /* LazyPoken */,
+				8D5B49AC048680CD000E48DA /* Preference Pane */,
+				60E01BBA0F2B7E1800931EF9 /* Script */,
 			);
 		};
 /* End PBXProject section */
@@ -162,12 +212,22 @@
 			files = (
 				8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */,
 				60E01B7C0F2B798100931EF9 /* PreferencePane.xib in Resources */,
+				60E01C3D0F2B86EB00931EF9 /* hand.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		60E01BB80F2B7E1800931EF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60E01C300F2B843700931EF9 /* LazyPokenLauncher.m in Sources */,
+				60E01C7A0F2B8A9000931EF9 /* LaunchController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D5B49B1048680CD000E48DA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -249,10 +309,56 @@
 			};
 			name = Release;
 		};
+		60E01BBD0F2B7E1800931EF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = Script;
+			};
+			name = Debug;
+		};
+		60E01BBE0F2B7E1800931EF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = Script;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "LazyPoken" */ = {
+		1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "Preference Pane" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB913B08733D840010E9CD /* Debug */,
@@ -266,6 +372,15 @@
 			buildConfigurations = (
 				1DEB913F08733D840010E9CD /* Debug */,
 				1DEB914008733D840010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60E01BCD0F2B7E3800931EF9 /* Build configuration list for PBXNativeTarget "Script" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60E01BBD0F2B7E1800931EF9 /* Debug */,
+				60E01BBE0F2B7E1800931EF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
