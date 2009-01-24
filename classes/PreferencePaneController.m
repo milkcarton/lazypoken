@@ -14,9 +14,13 @@
 {
 	serviceTask = [[NSTask alloc] init];
 	
+	
+	NSLog(@"Prt");
+	
 	// Create the ResourcePath for the script to launch
-	NSMutableString *scriptPath = [NSMutableString stringWithString:[[NSBundle bundleWithIdentifier:@"be.milkcarton.LazyPoken"] resourcePath]];
-	[scriptPath appendString:@"/Script"];
+	NSMutableString *scriptPath = [NSMutableString stringWithString:[[NSBundle bundleWithIdentifier:LPBundleIdentifier] resourcePath]];
+	[scriptPath appendString:@"/"];
+	[scriptPath appendString:LPScriptName];
 	
 	// Launch the script
 	[serviceTask setLaunchPath:scriptPath];

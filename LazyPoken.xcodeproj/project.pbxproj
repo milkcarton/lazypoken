@@ -60,7 +60,8 @@
 		60E01C3C0F2B86EB00931EF9 /* hand.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = hand.icns; path = resources/hand.icns; sourceTree = "<group>"; };
 		60E01C780F2B8A9000931EF9 /* LaunchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LaunchController.h; path = classes/LaunchController.h; sourceTree = "<group>"; };
 		60E01C790F2B8A9000931EF9 /* LaunchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LaunchController.m; path = classes/LaunchController.m; sourceTree = "<group>"; };
-		60E01CE90F2B93B900931EF9 /* Script */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Script; sourceTree = BUILT_PRODUCTS_DIR; };
+		60E01CE90F2B93B900931EF9 /* LazyPoken */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LazyPoken; sourceTree = BUILT_PRODUCTS_DIR; };
+		60E01DB40F2BB4C600931EF9 /* GlobalVariables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GlobalVariables.h; path = classes/GlobalVariables.h; sourceTree = "<group>"; };
 		8D5B49B6048680CD000E48DA /* LazyPoken.prefpane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyPoken.prefpane; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -132,6 +133,7 @@
 				60E01B820F2B79F600931EF9 /* PreferencePaneController.m */,
 				60E01C780F2B8A9000931EF9 /* LaunchController.h */,
 				60E01C790F2B8A9000931EF9 /* LaunchController.m */,
+				60E01DB40F2BB4C600931EF9 /* GlobalVariables.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -159,7 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				8D5B49B6048680CD000E48DA /* LazyPoken.prefpane */,
-				60E01CE90F2B93B900931EF9 /* Script */,
+				60E01CE90F2B93B900931EF9 /* LazyPoken */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -176,9 +178,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		60E01BBA0F2B7E1800931EF9 /* Script */ = {
+		60E01BBA0F2B7E1800931EF9 /* LazyPoken */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 60E01BCD0F2B7E3800931EF9 /* Build configuration list for PBXNativeTarget "Script" */;
+			buildConfigurationList = 60E01BCD0F2B7E3800931EF9 /* Build configuration list for PBXNativeTarget "LazyPoken" */;
 			buildPhases = (
 				60E01BB80F2B7E1800931EF9 /* Sources */,
 				60E01BB90F2B7E1800931EF9 /* Frameworks */,
@@ -189,9 +191,9 @@
 			dependencies = (
 				60E01DA30F2B9E1300931EF9 /* PBXTargetDependency */,
 			);
-			name = Script;
+			name = LazyPoken;
 			productName = Script;
-			productReference = 60E01CE90F2B93B900931EF9 /* Script */;
+			productReference = 60E01CE90F2B93B900931EF9 /* LazyPoken */;
 			productType = "com.apple.product-type.tool";
 		};
 		8D5B49AC048680CD000E48DA /* Preference Pane */ = {
@@ -225,7 +227,7 @@
 			projectRoot = "";
 			targets = (
 				8D5B49AC048680CD000E48DA /* Preference Pane */,
-				60E01BBA0F2B7E1800931EF9 /* Script */,
+				60E01BBA0F2B7E1800931EF9 /* LazyPoken */,
 			);
 		};
 /* End PBXProject section */
@@ -363,7 +365,7 @@
 					AppKit,
 				);
 				PREBINDING = NO;
-				PRODUCT_NAME = Script;
+				PRODUCT_NAME = LazyPoken;
 			};
 			name = Debug;
 		};
@@ -411,7 +413,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		60E01BCD0F2B7E3800931EF9 /* Build configuration list for PBXNativeTarget "Script" */ = {
+		60E01BCD0F2B7E3800931EF9 /* Build configuration list for PBXNativeTarget "LazyPoken" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				60E01BBD0F2B7E1800931EF9 /* Debug */,

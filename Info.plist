@@ -9,7 +9,7 @@
 	<key>CFBundleIconFile</key>
 	<string>hand</string>
 	<key>CFBundleIdentifier</key>
-	<string>be.milkcarton.${PRODUCT_NAME:identifier}</string>
+	<string>be.milkcarton.${PRODUCT_NAME:identifier}.prefpane</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
