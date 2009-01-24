@@ -15,6 +15,7 @@
 		60E01C300F2B843700931EF9 /* LazyPokenLauncher.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E01C2F0F2B843700931EF9 /* LazyPokenLauncher.m */; };
 		60E01C3D0F2B86EB00931EF9 /* hand.icns in Resources */ = {isa = PBXBuildFile; fileRef = 60E01C3C0F2B86EB00931EF9 /* hand.icns */; };
 		60E01C7A0F2B8A9000931EF9 /* LaunchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E01C790F2B8A9000931EF9 /* LaunchController.m */; };
+		60E01DE80F2BC1B900931EF9 /* hand63.png in Resources */ = {isa = PBXBuildFile; fileRef = 60E01DE70F2BC1B900931EF9 /* hand63.png */; };
 		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +63,7 @@
 		60E01C790F2B8A9000931EF9 /* LaunchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LaunchController.m; path = classes/LaunchController.m; sourceTree = "<group>"; };
 		60E01CE90F2B93B900931EF9 /* LazyPoken */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LazyPoken; sourceTree = BUILT_PRODUCTS_DIR; };
 		60E01DB40F2BB4C600931EF9 /* GlobalVariables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GlobalVariables.h; path = classes/GlobalVariables.h; sourceTree = "<group>"; };
+		60E01DE70F2BC1B900931EF9 /* hand63.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hand63.png; path = resources/hand63.png; sourceTree = "<group>"; };
 		8D5B49B6048680CD000E48DA /* LazyPoken.prefpane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyPoken.prefpane; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -118,6 +120,7 @@
 		089C167CFE841241C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				60E01DE70F2BC1B900931EF9 /* hand63.png */,
 				60E01C3C0F2B86EB00931EF9 /* hand.icns */,
 				8D5B49B7048680CD000E48DA /* Info.plist */,
 				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
@@ -240,6 +243,7 @@
 				8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */,
 				60E01B7C0F2B798100931EF9 /* PreferencePane.xib in Resources */,
 				60E01C3D0F2B86EB00931EF9 /* hand.icns in Resources */,
+				60E01DE80F2BC1B900931EF9 /* hand63.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
