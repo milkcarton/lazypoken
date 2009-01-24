@@ -20,6 +20,8 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
+	<key>NSMainNibFile</key>
+	<string>PreferencePane</string>
 	<key>NSPrincipalClass</key>
 	<string></string>
 </dict>
