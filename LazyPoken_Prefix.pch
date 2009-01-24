@@ -1,7 +1,0 @@
-//
-// Prefix header for all source files of the 'LazyPoken' target in the 'LazyPoken' project.
-//
-
-#ifdef __OBJC__
-    #import <Cocoa/Cocoa.h>
-#endif
