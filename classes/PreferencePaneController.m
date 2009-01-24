@@ -13,7 +13,13 @@
 - (IBAction)startLauchService:(id)sender
 {
 	serviceTask = [[NSTask alloc] init];
-	[serviceTask setLaunchPath:@"/Users/Jelle/Documents/Application Development/LazyPoken/build/Debug/Script"];
+	
+	// Create the ResourcePath for the script to launch
+	NSMutableString *scriptPath = [NSMutableString stringWithString:[[NSBundle bundleWithIdentifier:@"be.milkcarton.LazyPoken"] resourcePath]];
+	[scriptPath appendString:@"/Script"];
+	
+	// Launch the script
+	[serviceTask setLaunchPath:scriptPath];
 	[serviceTask launch];
 }
 

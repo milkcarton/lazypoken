@@ -29,7 +29,6 @@
 		60E01B7F0F2B79E200931EF9 /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = /System/Library/Frameworks/PreferencePanes.framework; sourceTree = "<absolute>"; };
 		60E01B810F2B79F600931EF9 /* PreferencePaneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PreferencePaneController.h; path = classes/PreferencePaneController.h; sourceTree = "<group>"; };
 		60E01B820F2B79F600931EF9 /* PreferencePaneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreferencePaneController.m; path = classes/PreferencePaneController.m; sourceTree = "<group>"; };
-		60E01BBB0F2B7E1800931EF9 /* Script */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = Script; path = "/Users/Jelle/Documents/Application Development/LazyPoken/build/Debug/Script"; sourceTree = "<absolute>"; wrapsLines = 0; };
 		60E01BE30F2B7FB800931EF9 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		60E01BE80F2B800800931EF9 /* SSYLoginItems */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SSYLoginItems; path = classes/SSYLoginItems; sourceTree = "<group>"; };
 		60E01C130F2B81F900931EF9 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
@@ -39,6 +38,7 @@
 		60E01C3C0F2B86EB00931EF9 /* hand.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = hand.icns; path = resources/hand.icns; sourceTree = "<group>"; };
 		60E01C780F2B8A9000931EF9 /* LaunchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LaunchController.h; path = classes/LaunchController.h; sourceTree = "<group>"; };
 		60E01C790F2B8A9000931EF9 /* LaunchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LaunchController.m; path = classes/LaunchController.m; sourceTree = "<group>"; };
+		60E01CE90F2B93B900931EF9 /* Script */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Script; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B6048680CD000E48DA /* LazyPoken.prefpane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyPoken.prefpane; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -137,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				8D5B49B6048680CD000E48DA /* LazyPoken.prefpane */,
+				60E01CE90F2B93B900931EF9 /* Script */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -166,7 +167,7 @@
 			);
 			name = Script;
 			productName = Script;
-			productReference = 60E01BBB0F2B7E1800931EF9 /* Script */;
+			productReference = 60E01CE90F2B93B900931EF9 /* Script */;
 			productType = "com.apple.product-type.tool";
 		};
 		8D5B49AC048680CD000E48DA /* Preference Pane */ = {
@@ -313,6 +314,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/LazyPoken.prefpane/Contents/Resources";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/LazyPoken.prefpane/Contents/Resources";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
