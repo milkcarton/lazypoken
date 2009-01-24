@@ -12,9 +12,14 @@
 
 - (IBAction)startLauchService:(id)sender
 {
-	NSTask *serviceTask = [[NSTask alloc] init];
+	serviceTask = [[NSTask alloc] init];
 	[serviceTask setLaunchPath:@"/Users/Jelle/Documents/Application Development/LazyPoken/build/Debug/Script"];
 	[serviceTask launch];
+}
+
+- (IBAction)stopLauchService:(id)sender
+{
+	[serviceTask interrupt];
 }
 
 @end
