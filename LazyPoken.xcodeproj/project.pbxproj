@@ -18,6 +18,8 @@
 		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 		F456FCF60F2BD10D00421820 /* hand64.png in Resources */ = {isa = PBXBuildFile; fileRef = F456FCF50F2BD10D00421820 /* hand64.png */; };
+		F48A6F880F2BF38200FE4F9C /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F48A6F860F2BF38200FE4F9C /* LICENSE */; };
+		F48A6F890F2BF38200FE4F9C /* NOTICE in Resources */ = {isa = PBXBuildFile; fileRef = F48A6F870F2BF38200FE4F9C /* NOTICE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		F456FCF50F2BD10D00421820 /* hand64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hand64.png; path = resources/hand64.png; sourceTree = "<group>"; };
+		F48A6F860F2BF38200FE4F9C /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		F48A6F870F2BF38200FE4F9C /* NOTICE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NOTICE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,8 @@
 		089C167CFE841241C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F48A6F860F2BF38200FE4F9C /* LICENSE */,
+				F48A6F870F2BF38200FE4F9C /* NOTICE */,
 				60E01C3C0F2B86EB00931EF9 /* hand.icns */,
 				F456FCF50F2BD10D00421820 /* hand64.png */,
 				8D5B49B7048680CD000E48DA /* Info.plist */,
@@ -244,6 +250,8 @@
 				60E01B7C0F2B798100931EF9 /* PreferencePane.xib in Resources */,
 				60E01C3D0F2B86EB00931EF9 /* hand.icns in Resources */,
 				F456FCF60F2BD10D00421820 /* hand64.png in Resources */,
+				F48A6F880F2BF38200FE4F9C /* LICENSE in Resources */,
+				F48A6F890F2BF38200FE4F9C /* NOTICE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
