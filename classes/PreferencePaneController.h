@@ -12,6 +12,11 @@
 
 @interface PreferencePaneController : NSPreferencePane {
 	@private NSTask *serviceTask;
+	@private NSNumber *launchOnStartup;
+	
+	IBOutlet NSButton *startupCheckbox;
+	IBOutlet NSButton *startButton;
+	IBOutlet NSTextField *statusText;
 }
 
 // Action to start the launch service script.
