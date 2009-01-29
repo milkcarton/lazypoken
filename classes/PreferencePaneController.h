@@ -39,16 +39,26 @@
 	IBOutlet NSTextField *statusText;
 }
 
+// The button decides to start or stop the LazyPoken agent
+- (IBAction)startStopAgent:(id)sender;
+
 // Action to start the launch service script.
-- (IBAction)startLauchService:(id)sender;
+- (void)startLauchService;
 
 // Action to stop the launch service script.
-- (IBAction)stopLauchService:(id)sender;
+- (void)stopLauchService;
 
-// Reads the user "start automatically" default to LPBundleIdentifier instead of the com.apple.systempreferences
+// Reads the LazyPoken agent's process id from the LPBundleIdentifier instead of the com.apple.systempreferences
+// Returns 0 when no process id was found
+- (int)getProcessID;
+
+// Writes the LazyPoken agent's process id to the LPBundleIdentifier instead of the com.apple.systempreferences
+- (void)setProcessID:(int)pid;
+
+// Reads the user "start automatically" default from the LPBundleIdentifier instead of the com.apple.systempreferences
 - (BOOL)getLaunchOnStartup;
 
-// Writes the user "start automatically" default to LPBundleIdentifier instead of the com.apple.systempreferences
+// Writes the user "start automatically" default to the agent's process idLPBundleIdentifier instead of the com.apple.systempreferences
 - (IBAction)setlaunchOnStartup:(id)sender;
 
 @end

@@ -40,7 +40,23 @@
 }
 
 
-- (IBAction)startLauchService:(id)sender
+- (IBAction)startStopAgent:(id)sender
+{
+	if ([[statusText stringValue] caseInsensitiveCompare:@"stopped"] == NSOrderedSame) {
+		[self startLauchService];
+		[startButton setTitle:@"Stop LazyPoken"];
+		[statusText setStringValue:@"running"];
+		[statusText setTextColor:[NSColor colorWithCalibratedRed:0.42 green:0.71 blue:0.26 alpha:1]];
+	} else {
+		[self stopLauchService];
+		[startButton setTitle:@"Start LazyPoken"];
+		[statusText setStringValue:@"stopped"];
+		[statusText setTextColor:[NSColor redColor]]; 
+	}
+
+}
+
+- (void)startLauchService
 {
 	serviceTask = [[NSTask alloc] init];
 	
@@ -49,24 +65,51 @@
 	[scriptPath appendString:@"/"];
 	[scriptPath appendString:LPScriptName];
 	
-	// Launch the script
+	// Launch the script and save the process id
 	[serviceTask setLaunchPath:scriptPath];
 	[serviceTask launch];
-	
-	// Change the interface
-	[startButton setTitle:@"Stop LazyPoken"];
-	[statusText setStringValue:@"running"];
-	[statusText setTextColor:[NSColor colorWithCalibratedRed:0.42 green:0.71 blue:0.26 alpha:1]]; 
+	[self setProcessID:[serviceTask processIdentifier]]; // save to LPBundleIdentifier
+	NSLog(@"Started the LazyPoken agent (process %i)", [serviceTask processIdentifier]);
 }
 
-- (IBAction)stopLauchService:(id)sender
+- (void)stopLauchService
 {
-	[serviceTask interrupt];
+	int pid = [self getProcessID];
+	pid_t pidt = pid;
+	ProcessSerialNumber psn;
+	if (noErr == GetProcessForPID(pidt, &psn)) {
+		KillProcess(&psn);
+		NSLog(@"Stopped the LazyPoken agent (process %i)", pid);
+	} else {
+		NSLog(@"Could not stop the LazyPoken agent");
+	}
+}
+
+- (int)getProcessID
+{
+	int value = 0;
+	CFStringRef key = CFSTR("LPProcessID");
+	CFStringRef bundleID = (CFStringRef)LPBundleIdentifier;
+	CFPropertyListRef ref = CFPreferencesCopyAppValue(key, bundleID);
+
+	if(ref && CFGetTypeID(ref) == CFNumberGetTypeID()) {
+		CFNumberGetValue(ref, kCFNumberIntType, &value);
+	}
+
+	if(ref) {
+		CFRelease(ref);
+	}
 	
-	// Change the interface
-	[startButton setTitle:@"Start LazyPoken"];
-	[statusText setStringValue:@"stopped"];
-	[statusText setTextColor:[NSColor redColor]]; 
+	return value; // returns 0 when no process id was found
+}
+
+- (void)setProcessID:(int)pid
+{	
+	CFStringRef key = CFSTR("LPProcessID");
+	CFPropertyListRef value = (CFNumberRef)[NSNumber numberWithInt:pid];
+	CFStringRef bundleID = (CFStringRef)LPBundleIdentifier;
+	CFPreferencesSetAppValue(key, value, bundleID);
+    CFPreferencesAppSynchronize(bundleID);
 }
 
 - (BOOL)getLaunchOnStartup
@@ -75,15 +118,15 @@
 	CFStringRef key = CFSTR("LPLaunchOnStartup");
 	CFStringRef bundleID = (CFStringRef)LPBundleIdentifier;
 	CFPropertyListRef ref = CFPreferencesCopyAppValue(key, bundleID);
-
+	
 	if(ref && CFGetTypeID(ref) == CFBooleanGetTypeID()) {
 		value = CFBooleanGetValue(ref);
 	}
-
+	
 	if(ref) {
 		CFRelease(ref);
 	}
-
+	
 	return value;
 }
 
