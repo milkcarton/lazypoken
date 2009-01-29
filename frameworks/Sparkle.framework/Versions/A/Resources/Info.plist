@@ -5,26 +5,20 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
-	<string>${EXECUTABLE_NAME}</string>
-	<key>CFBundleIconFile</key>
-	<string>hand</string>
+	<string>Sparkle</string>
 	<key>CFBundleIdentifier</key>
-	<string>be.milkcarton.${PRODUCT_NAME:identifier}.prefpane</string>
+	<string>org.andymatuschak.Sparkle</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>${PRODUCT_NAME}</string>
+	<string>Sparkle</string>
 	<key>CFBundlePackageType</key>
-	<string>BNDL</string>
+	<string>FMWK</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.5 Beta 6</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>0.1</string>
-	<key>NSMainNibFile</key>
-	<string>PreferencePane</string>
-	<key>NSPrincipalClass</key>
-	<string></string>
-	<key>SUFeedURL</key>
-	<string>http://feeds.feedburner.com/milkcarton/lazypoken</string>
+	<string>313</string>
 </dict>
 </plist>

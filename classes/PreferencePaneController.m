@@ -31,10 +31,11 @@
 
 - (void)awakeFromNib
 {	
-	launchOnStartup = [[NSUserDefaults standardUserDefaults] objectForKey:@"LPLaunchOnStartup"];
-	if (launchOnStartup == nil) {
-		launchOnStartup = [NSNumber numberWithInt:YES];
-	}
+	SUUpdater *updater = [SUUpdater updaterForBundle:[NSBundle bundleWithIdentifier:LPBundleIdentifier]];
+	[updater setAutomaticallyChecksForUpdates:YES];
+	[updater resetUpdateCycle];
+	
+	launchOnStartup = [NSNumber numberWithInt:[self getLaunchOnStartup]];
 	[startupCheckbox setState:[launchOnStartup intValue]];
 }
 
@@ -66,6 +67,33 @@
 	[startButton setTitle:@"Start LazyPoken"];
 	[statusText setStringValue:@"stopped"];
 	[statusText setTextColor:[NSColor redColor]]; 
+}
+
+- (BOOL)getLaunchOnStartup
+{
+	BOOL value = YES;
+	CFStringRef key = CFSTR("LPLaunchOnStartup");
+	CFStringRef bundleID = (CFStringRef)LPBundleIdentifier;
+	CFPropertyListRef ref = CFPreferencesCopyAppValue(key, bundleID);
+
+	if(ref && CFGetTypeID(ref) == CFBooleanGetTypeID()) {
+		value = CFBooleanGetValue(ref);
+	}
+
+	if(ref) {
+		CFRelease(ref);
+	}
+
+	return value;
+}
+
+- (IBAction)setlaunchOnStartup:(id)sender
+{	
+	CFStringRef key = CFSTR("LPLaunchOnStartup");
+	BOOL value = (BOOL)[sender state];
+	CFStringRef bundleID = (CFStringRef)LPBundleIdentifier;
+	CFPreferencesSetAppValue(key, value ? kCFBooleanTrue : kCFBooleanFalse, bundleID);
+    CFPreferencesAppSynchronize(bundleID);
 }
 
 @end

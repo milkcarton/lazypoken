@@ -26,6 +26,7 @@
 */
 
 #import <Cocoa/Cocoa.h>
+#import <Sparkle/Sparkle.h>
 #import <PreferencePanes/PreferencePanes.h>
 #import "GlobalVariables.h"
 
@@ -43,5 +44,11 @@
 
 // Action to stop the launch service script.
 - (IBAction)stopLauchService:(id)sender;
+
+// Reads the user "start automatically" default to LPBundleIdentifier instead of the com.apple.systempreferences
+- (BOOL)getLaunchOnStartup;
+
+// Writes the user "start automatically" default to LPBundleIdentifier instead of the com.apple.systempreferences
+- (IBAction)setlaunchOnStartup:(id)sender;
 
 @end

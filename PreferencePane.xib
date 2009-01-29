@@ -288,22 +288,6 @@
 					<int key="connectionID">30</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: values.LPLaunchOnStartup</string>
-						<reference key="source" ref="899835242"/>
-						<reference key="destination" ref="805441149"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="899835242"/>
-							<reference key="NSDestination" ref="805441149"/>
-							<string key="NSLabel">value: values.LPLaunchOnStartup</string>
-							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">values.LPLaunchOnStartup</string>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">54</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">startupCheckbox</string>
 						<reference key="source" ref="1001"/>
@@ -326,6 +310,14 @@
 						<reference key="destination" ref="787010767"/>
 					</object>
 					<int key="connectionID">57</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">setlaunchOnStartup:</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="899835242"/>
+					</object>
+					<int key="connectionID">67</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -590,7 +582,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">57</int>
+			<int key="maxID">67</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -602,11 +594,13 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSMutableArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>setlaunchOnStartup:</string>
 							<string>startLauchService:</string>
 							<string>stopLauchService:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 						</object>
