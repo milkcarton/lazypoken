@@ -28,3 +28,4 @@
 #define LPVolumeName @"/Volumes/POKEN"
 #define LPScriptName @"LazyPoken"
 #define LPBundleIdentifier @"be.milkcarton.LazyPoken.prefpane"
+#define LPBUndleTag @"be.milkcarton.LazyPoken.prefpane.tag"

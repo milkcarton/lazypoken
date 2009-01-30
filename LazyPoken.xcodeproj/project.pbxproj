@@ -22,6 +22,8 @@
 		F456FCF60F2BD10D00421820 /* hand64.png in Resources */ = {isa = PBXBuildFile; fileRef = F456FCF50F2BD10D00421820 /* hand64.png */; };
 		F48A6F880F2BF38200FE4F9C /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F48A6F860F2BF38200FE4F9C /* LICENSE */; };
 		F48A6F890F2BF38200FE4F9C /* NOTICE in Resources */ = {isa = PBXBuildFile; fileRef = F48A6F870F2BF38200FE4F9C /* NOTICE */; };
+		F4D381B60F336DE5009A1DF9 /* AGProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D381B40F336DE5009A1DF9 /* AGProcess.m */; };
+		F4D381B70F336DE5009A1DF9 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = F4D381B50F336DE5009A1DF9 /* README.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,9 @@
 		F456FCF50F2BD10D00421820 /* hand64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hand64.png; path = resources/hand64.png; sourceTree = "<group>"; };
 		F48A6F860F2BF38200FE4F9C /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		F48A6F870F2BF38200FE4F9C /* NOTICE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NOTICE; sourceTree = "<group>"; };
+		F4D381B30F336DE5009A1DF9 /* AGProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGProcess.h; sourceTree = "<group>"; };
+		F4D381B40F336DE5009A1DF9 /* AGProcess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGProcess.m; sourceTree = "<group>"; };
+		F4D381B50F336DE5009A1DF9 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +156,7 @@
 		08FB77AFFE84173DC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F4D381B20F336DE5009A1DF9 /* AGProcess */,
 				60E01BE80F2B800800931EF9 /* SSYLoginItems */,
 				60E01B810F2B79F600931EF9 /* PreferencePaneController.h */,
 				60E01B820F2B79F600931EF9 /* PreferencePaneController.m */,
@@ -197,6 +203,17 @@
 				60E01C2F0F2B843700931EF9 /* LazyPokenLauncher.m */,
 			);
 			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		F4D381B20F336DE5009A1DF9 /* AGProcess */ = {
+			isa = PBXGroup;
+			children = (
+				F4D381B30F336DE5009A1DF9 /* AGProcess.h */,
+				F4D381B40F336DE5009A1DF9 /* AGProcess.m */,
+				F4D381B50F336DE5009A1DF9 /* README.txt */,
+			);
+			name = AGProcess;
+			path = classes/AGProcess;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +292,7 @@
 				F456FCF60F2BD10D00421820 /* hand64.png in Resources */,
 				F48A6F880F2BF38200FE4F9C /* LICENSE in Resources */,
 				F48A6F890F2BF38200FE4F9C /* NOTICE in Resources */,
+				F4D381B70F336DE5009A1DF9 /* README.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60E01B830F2B79F600931EF9 /* PreferencePaneController.m in Sources */,
+				F4D381B60F336DE5009A1DF9 /* AGProcess.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

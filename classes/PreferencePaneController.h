@@ -29,6 +29,7 @@
 #import <Sparkle/Sparkle.h>
 #import <PreferencePanes/PreferencePanes.h>
 #import "GlobalVariables.h"
+#import "AGProcess.h"
 
 @interface PreferencePaneController : NSPreferencePane {
 	@private NSTask *serviceTask;
@@ -36,6 +37,7 @@
 	
 	IBOutlet NSButton *startupCheckbox;
 	IBOutlet NSButton *startButton;
+	IBOutlet NSTextField *descriptionText;
 	IBOutlet NSTextField *statusText;
 }
 
@@ -47,13 +49,6 @@
 
 // Action to stop the launch service script.
 - (void)stopLauchService;
-
-// Reads the LazyPoken agent's process id from the LPBundleIdentifier instead of the com.apple.systempreferences
-// Returns 0 when no process id was found
-- (int)getProcessID;
-
-// Writes the LazyPoken agent's process id to the LPBundleIdentifier instead of the com.apple.systempreferences
-- (void)setProcessID:(int)pid;
 
 // Reads the user "start automatically" default from the LPBundleIdentifier instead of the com.apple.systempreferences
 - (BOOL)getLaunchOnStartup;
