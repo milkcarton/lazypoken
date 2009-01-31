@@ -56,7 +56,7 @@
 - (void)stopLauchService;
 
 // Changes the interface fields (YES = show the started state, NO = show the stoped state)
-- (void)changeInterface:(BOOL)running;
+- (void)runningInterface:(BOOL)running;
 
 // Reads the user "start automatically" default from the LPBundleIdentifier instead of the com.apple.systempreferences
 - (BOOL)getLaunchOnStartup;

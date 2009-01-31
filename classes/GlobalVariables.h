@@ -32,5 +32,3 @@
 
 #define MCLocalizedString(key) \
 [[NSBundle bundleForClass:[self class]] localizedStringForKey:(key) value:nil table:@"Localizable"]
-
-// [NSBundle bundleWithIdentifier:@"be.milkcarton.LazyPoken"]

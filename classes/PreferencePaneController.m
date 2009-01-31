@@ -36,7 +36,6 @@
 	runningImage = [[NSImage alloc] initWithContentsOfFile:tmp];
 	tmp = [[NSBundle bundleForClass:[self class]] pathForResource:@"hand64stopped" ofType:@"png"];
 	stoppedImage = [[NSImage alloc] initWithContentsOfFile:tmp];
-	[tmp release];
 	
 	SUUpdater *updater = [SUUpdater updaterForBundle:[NSBundle bundleWithIdentifier:LPBundleIdentifier]];
 	[updater setAutomaticallyChecksForUpdates:YES];
@@ -46,10 +45,10 @@
 	[startupCheckbox setState:[launchOnStartup intValue]];
 	
 	// FIXME Check the process status before setting the interface
-	[self changeInterface:YES];
+	[self runningInterface:NO];
 }
 
-- (void)changeInterface:(BOOL)running
+- (void)runningInterface:(BOOL)running
 {
 	if (running) {
 		[handImage setImage:runningImage];
@@ -76,10 +75,10 @@
 {
 	if ([[statusText stringValue] caseInsensitiveCompare:MCLocalizedString(@"STOPPED")] == NSOrderedSame) {
 		[self startLauchService];
-		[self changeInterface:YES];
+		[self runningInterface:YES];
 	} else {
 		[self stopLauchService];
-		[self changeInterface:NO];
+		[self runningInterface:NO];
 	}
 }
 
