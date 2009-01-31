@@ -34,7 +34,10 @@
 @interface PreferencePaneController : NSPreferencePane {
 	@private NSTask *serviceTask;
 	@private NSNumber *launchOnStartup;
+	@private NSImage *runningImage;
+	@private NSImage *stoppedImage;
 	
+	IBOutlet NSImageView *handImage;
 	IBOutlet NSTextField *titleText;
 	IBOutlet NSTextField *descriptionText;
 	IBOutlet NSTextField *preStatusText;
@@ -51,6 +54,9 @@
 
 // Action to stop the launch service script.
 - (void)stopLauchService;
+
+// Changes the interface fields (YES = show the started state, NO = show the stoped state)
+- (void)changeInterface:(BOOL)running;
 
 // Reads the user "start automatically" default from the LPBundleIdentifier instead of the com.apple.systempreferences
 - (BOOL)getLaunchOnStartup;

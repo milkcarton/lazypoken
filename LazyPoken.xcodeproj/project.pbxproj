@@ -24,6 +24,8 @@
 		F48A6F890F2BF38200FE4F9C /* NOTICE in Resources */ = {isa = PBXBuildFile; fileRef = F48A6F870F2BF38200FE4F9C /* NOTICE */; };
 		F4D381B60F336DE5009A1DF9 /* AGProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D381B40F336DE5009A1DF9 /* AGProcess.m */; };
 		F4D381B70F336DE5009A1DF9 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = F4D381B50F336DE5009A1DF9 /* README.txt */; };
+		F4E7F2360F342EC100B130E8 /* hand64stopped.png in Resources */ = {isa = PBXBuildFile; fileRef = F4E7F2340F342EC100B130E8 /* hand64stopped.png */; };
+		F4E7F2370F342EC100B130E8 /* hand64running.png in Resources */ = {isa = PBXBuildFile; fileRef = F4E7F2350F342EC100B130E8 /* hand64running.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,8 @@
 		F4D381B30F336DE5009A1DF9 /* AGProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGProcess.h; sourceTree = "<group>"; };
 		F4D381B40F336DE5009A1DF9 /* AGProcess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGProcess.m; sourceTree = "<group>"; };
 		F4D381B50F336DE5009A1DF9 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		F4E7F2340F342EC100B130E8 /* hand64stopped.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hand64stopped.png; path = resources/hand64stopped.png; sourceTree = "<group>"; };
+		F4E7F2350F342EC100B130E8 /* hand64running.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hand64running.png; path = resources/hand64running.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,8 @@
 				F48A6F860F2BF38200FE4F9C /* LICENSE */,
 				F48A6F870F2BF38200FE4F9C /* NOTICE */,
 				60E01C3C0F2B86EB00931EF9 /* hand.icns */,
+				F4E7F2340F342EC100B130E8 /* hand64stopped.png */,
+				F4E7F2350F342EC100B130E8 /* hand64running.png */,
 				F456FCF50F2BD10D00421820 /* hand64.png */,
 				8D5B49B7048680CD000E48DA /* Info.plist */,
 				F476F8320F33CE8D00AD17CF /* Localizable.strings */,
@@ -295,6 +301,8 @@
 				F48A6F890F2BF38200FE4F9C /* NOTICE in Resources */,
 				F4D381B70F336DE5009A1DF9 /* README.txt in Resources */,
 				F476F8330F33CE8D00AD17CF /* Localizable.strings in Resources */,
+				F4E7F2360F342EC100B130E8 /* hand64stopped.png in Resources */,
+				F4E7F2370F342EC100B130E8 /* hand64running.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

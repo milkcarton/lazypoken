@@ -31,6 +31,13 @@
 
 - (void)awakeFromNib
 {	
+	// Find the different status images
+	NSString* tmp = [[NSBundle bundleForClass:[self class]] pathForResource:@"hand64running" ofType:@"png"];
+	runningImage = [[NSImage alloc] initWithContentsOfFile:tmp];
+	tmp = [[NSBundle bundleForClass:[self class]] pathForResource:@"hand64stopped" ofType:@"png"];
+	stoppedImage = [[NSImage alloc] initWithContentsOfFile:tmp];
+	[tmp release];
+	
 	SUUpdater *updater = [SUUpdater updaterForBundle:[NSBundle bundleWithIdentifier:LPBundleIdentifier]];
 	[updater setAutomaticallyChecksForUpdates:YES];
 	[updater resetUpdateCycle];
@@ -39,32 +46,41 @@
 	[startupCheckbox setState:[launchOnStartup intValue]];
 	
 	// FIXME Check the process status before setting the interface
-	[titleText setStringValue:MCLocalizedString(@"LAZYPOKEN_STATUS")];
-	[startButton setTitle:MCLocalizedString(@"START_LAZYPOKEN")];
-	[descriptionText setStringValue:MCLocalizedString(@"START_DESCRIPTION")];
-	[preStatusText setStringValue:MCLocalizedString(@"PRE_STATUS")];
-	[statusText setStringValue:MCLocalizedString(@"STOPPED")];
-	[statusText setTextColor:[NSColor redColor]];
-	[startupCheckbox setTitle:MCLocalizedString(@"START_AT_STARTUP")];
+	[self changeInterface:YES];
 }
 
+- (void)changeInterface:(BOOL)running
+{
+	if (running) {
+		[handImage setImage:runningImage];
+		[startButton setTitle:MCLocalizedString(@"STOP_LAZYPOKEN")];
+		[titleText setStringValue:MCLocalizedString(@"LAZYPOKEN_STATUS")];
+		[descriptionText setStringValue:MCLocalizedString(@"STOP_DESCRIPTION")];
+		[preStatusText setStringValue:MCLocalizedString(@"PRE_STATUS")];
+		[statusText setStringValue:MCLocalizedString(@"RUNNING")];
+		[statusText setTextColor:[NSColor colorWithCalibratedRed:0.42 green:0.71 blue:0.26 alpha:1]];
+		[startupCheckbox setTitle:MCLocalizedString(@"START_AT_STARTUP")];		
+	} else {
+		[handImage setImage:stoppedImage];
+		[startButton setTitle:MCLocalizedString(@"START_LAZYPOKEN")];
+		[titleText setStringValue:MCLocalizedString(@"LAZYPOKEN_STATUS")];
+		[descriptionText setStringValue:MCLocalizedString(@"START_DESCRIPTION")];
+		[preStatusText setStringValue:MCLocalizedString(@"PRE_STATUS")];
+		[statusText setStringValue:MCLocalizedString(@"STOPPED")];
+		[statusText setTextColor:[NSColor redColor]];
+		[startupCheckbox setTitle:MCLocalizedString(@"START_AT_STARTUP")];
+	}
+}
 
 - (IBAction)startStopAgent:(id)sender
 {
 	if ([[statusText stringValue] caseInsensitiveCompare:MCLocalizedString(@"STOPPED")] == NSOrderedSame) {
 		[self startLauchService];
-		[startButton setTitle:MCLocalizedString(@"STOP_LAZYPOKEN")];
-		[descriptionText setStringValue:MCLocalizedString(@"STOP_DESCRIPTION")];
-		[statusText setStringValue:MCLocalizedString(@"RUNNING")];
-		[statusText setTextColor:[NSColor colorWithCalibratedRed:0.42 green:0.71 blue:0.26 alpha:1]];
+		[self changeInterface:YES];
 	} else {
 		[self stopLauchService];
-		[startButton setTitle:MCLocalizedString(@"START_LAZYPOKEN")];
-		[descriptionText setStringValue:MCLocalizedString(@"START_DESCRIPTION")];
-		[statusText setStringValue:MCLocalizedString(@"STOPPED")];
-		[statusText setTextColor:[NSColor redColor]]; 
+		[self changeInterface:NO];
 	}
-
 }
 
 - (void)startLauchService

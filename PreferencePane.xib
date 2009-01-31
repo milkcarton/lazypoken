@@ -325,6 +325,14 @@ dCBMYXp5UG9rZW4iIGJ1dHRvbi4</string>
 					</object>
 					<int key="connectionID">73</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">handImage</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="138042669"/>
+					</object>
+					<int key="connectionID">75</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -564,7 +572,7 @@ dCBMYXp5UG9rZW4iIGJ1dHRvbi4</string>
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">73</int>
+			<int key="maxID">75</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -590,6 +598,7 @@ dCBMYXp5UG9rZW4iIGJ1dHRvbi4</string>
 						<object class="NSMutableArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>descriptionText</string>
+							<string>handImage</string>
 							<string>preStatusText</string>
 							<string>startButton</string>
 							<string>startupCheckbox</string>
@@ -599,6 +608,7 @@ dCBMYXp5UG9rZW4iIGJ1dHRvbi4</string>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>NSTextField</string>
+							<string>NSImageView</string>
 							<string>NSTextField</string>
 							<string>NSButton</string>
 							<string>NSButton</string>
