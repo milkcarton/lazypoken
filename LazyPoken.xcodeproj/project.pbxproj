@@ -83,7 +83,7 @@
 		60E01C3C0F2B86EB00931EF9 /* hand.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = hand.icns; path = resources/hand.icns; sourceTree = "<group>"; };
 		60E01C780F2B8A9000931EF9 /* LaunchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LaunchController.h; path = classes/LaunchController.h; sourceTree = "<group>"; };
 		60E01C790F2B8A9000931EF9 /* LaunchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LaunchController.m; path = classes/LaunchController.m; sourceTree = "<group>"; };
-		60E01CE90F2B93B900931EF9 /* LazyPoken */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LazyPoken; sourceTree = BUILT_PRODUCTS_DIR; };
+		60E01CE90F2B93B900931EF9 /* Script */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Script; sourceTree = BUILT_PRODUCTS_DIR; };
 		60E01DB40F2BB4C600931EF9 /* GlobalVariables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GlobalVariables.h; path = classes/GlobalVariables.h; sourceTree = "<group>"; };
 		8D5B49B6048680CD000E48DA /* LazyPoken.prefpane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyPoken.prefpane; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -203,7 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				8D5B49B6048680CD000E48DA /* LazyPoken.prefpane */,
-				60E01CE90F2B93B900931EF9 /* LazyPoken */,
+				60E01CE90F2B93B900931EF9 /* Script */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -258,7 +258,7 @@
 			);
 			name = LazyPoken;
 			productName = Script;
-			productReference = 60E01CE90F2B93B900931EF9 /* LazyPoken */;
+			productReference = 60E01CE90F2B93B900931EF9 /* Script */;
 			productType = "com.apple.product-type.tool";
 		};
 		8D5B49AC048680CD000E48DA /* Preference Pane */ = {
@@ -406,7 +406,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				PRODUCT_NAME = LazyPoken;
-				WRAPPER_EXTENSION = bundle;
+				WRAPPER_EXTENSION = prefpane;
 			};
 			name = Release;
 		};
@@ -465,6 +465,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/LazyPoken.prefpane/Contents/Resources";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/LazyPoken.prefpane/Contents/Resources";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
