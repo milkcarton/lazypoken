@@ -29,7 +29,7 @@
 
 @implementation PreferencePaneController
 
-- (void)awakeFromNib
+- (void)willSelect
 {	
 	// Find the different status images
 	NSString* tmp = [[NSBundle bundleForClass:[self class]] pathForResource:@"hand64running" ofType:@"png"];
@@ -133,29 +133,36 @@
 
 - (BOOL)getLaunchOnStartup
 {
-	BOOL value = YES;
-	CFStringRef key = CFSTR("LPLaunchOnStartup");
-	CFStringRef bundleID = (CFStringRef)LPBundleIdentifier;
-	CFPropertyListRef ref = CFPreferencesCopyAppValue(key, bundleID);
+	NSNumber *loginItem = nil;
+	NSNumber *hidden = nil;
+	NSError *error = nil;
+	NSMutableString *scriptPath = [NSMutableString stringWithString:[[NSBundle bundleWithIdentifier:LPBundleIdentifier] resourcePath]];
+	[scriptPath appendString:@"/"];
+	[scriptPath appendString:LPScriptName];
+	BOOL ok = [SSYLoginItems isURL:[NSURL fileURLWithPath:scriptPath] loginItem:&loginItem hidden:&hidden error:&error];
 	
-	if(ref && CFGetTypeID(ref) == CFBooleanGetTypeID()) {
-		value = CFBooleanGetValue(ref);
+	if (ok && [loginItem boolValue]) {
+		return TRUE;
 	}
-	
-	if(ref) {
-		CFRelease(ref);
-	}
-	
-	return value;
+	return FALSE;
 }
 
 - (IBAction)setlaunchOnStartup:(id)sender
-{	
-	CFStringRef key = CFSTR("LPLaunchOnStartup");
-	BOOL value = (BOOL)[sender state];
-	CFStringRef bundleID = (CFStringRef)LPBundleIdentifier;
-	CFPreferencesSetAppValue(key, value ? kCFBooleanTrue : kCFBooleanFalse, bundleID);
-    CFPreferencesAppSynchronize(bundleID);
+{
+	NSError *error = nil;
+	NSMutableString *scriptPath = [NSMutableString stringWithString:[[NSBundle bundleWithIdentifier:LPBundleIdentifier] resourcePath]];
+	[scriptPath appendString:@"/"];
+	[scriptPath appendString:LPScriptName];
+	
+	if ([sender state]) {
+		[SSYLoginItems addLoginURL:[NSURL fileURLWithPath:scriptPath] hidden:[NSNumber numberWithBool:TRUE] error:&error];
+	} else {
+		[SSYLoginItems removeLoginURL:[NSURL fileURLWithPath:scriptPath] error:&error];
+	}
+	
+	if (error != nil) {
+		NSLog(@"LazyPoken Startup Error: %@", [error description]);
+	}
 }
 
 @end

@@ -30,6 +30,7 @@
 #import <PreferencePanes/PreferencePanes.h>
 #import "GlobalVariables.h"
 #import "AGProcess.h"
+#import "SSYLoginItems.h"
 
 @interface PreferencePaneController : NSPreferencePane {
 	@private NSTask *serviceTask;
