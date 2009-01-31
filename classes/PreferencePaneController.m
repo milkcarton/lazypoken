@@ -31,6 +31,17 @@
 
 - (void)willSelect
 {	
+	NSString *thisVersion = [[[NSBundle bundleWithIdentifier:LPBundleIdentifier] infoDictionary] valueForKey:@"CFBundleVersion"];
+	if ([[self getRunningVersion] caseInsensitiveCompare:thisVersion] != 0 && [self isRunning]) {
+		// This is an update, set the new value and restart the agent
+		NSLog(@"Update found, restarting the LazyPoken agent");
+		[self setRunningVersion];
+		[self stopLauchService];
+		[self startLauchService];
+		[self runningInterface:YES];
+	}
+	
+	
 	// Find the different status images
 	NSString* tmp = [[NSBundle bundleForClass:[self class]] pathForResource:@"hand64running" ofType:@"png"];
 	runningImage = [[NSImage alloc] initWithContentsOfFile:tmp];
@@ -92,6 +103,7 @@
     [serviceTask setEnvironment:environment];
 
 	[serviceTask launch];
+	[self setRunningVersion];
 	NSLog(@"Started the LazyPoken agent");
 }
 
@@ -163,6 +175,31 @@
 	if (error != nil) {
 		NSLog(@"LazyPoken Startup Error: %@", [error description]);
 	}
+}
+
+- (NSString *)getRunningVersion 
+{
+	NSString *version = @""; // default value if not found
+	CFStringRef key = CFSTR("LPRunningVersion");
+	CFStringRef bundleID = (CFStringRef)LPBundleIdentifier;
+	CFPropertyListRef ref = CFPreferencesCopyAppValue(key, bundleID);
+		
+	if(ref && CFGetTypeID(ref) == CFStringGetTypeID())
+		version = (NSString*)ref;
+	
+	if(ref)
+		CFRelease(ref);
+		
+	return version;
+}
+
+- (void)setRunningVersion
+{
+	CFStringRef version = (CFStringRef)[[[NSBundle bundleWithIdentifier:LPBundleIdentifier] infoDictionary] valueForKey:@"CFBundleVersion"];
+	CFStringRef key = CFSTR("LPRunningVersion");
+	CFStringRef bundleID = (CFStringRef)LPBundleIdentifier;
+	CFPreferencesSetAppValue(key, version, bundleID);
+	CFPreferencesAppSynchronize(bundleID);
 }
 
 @end

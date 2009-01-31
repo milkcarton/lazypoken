@@ -63,7 +63,14 @@
 // Reads the user "start automatically" default from the LPBundleIdentifier instead of the com.apple.systempreferences
 - (BOOL)getLaunchOnStartup;
 
-// Writes the user "start automatically" default to the agent's process idLPBundleIdentifier instead of the com.apple.systempreferences
+// Writes the user "start automatically" default to the LPBundleIdentifier instead of the com.apple.systempreferences
 - (IBAction)setlaunchOnStartup:(id)sender;
+
+// Reads the defaults version number from the LPBundleIdentifier instead of the com.apple.systempreferences
+// This is used to check if we need to reload the running script after an update
+- (NSString *)getRunningVersion;
+
+// Writes the current version to the defaults to the LPBundleIdentifier instead of the com.apple.systempreferences
+- (void)setRunningVersion;
 
 @end
