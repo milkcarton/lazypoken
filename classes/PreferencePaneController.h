@@ -40,8 +40,6 @@
 	IBOutlet NSImageView *handImage;
 	IBOutlet NSTextField *titleText;
 	IBOutlet NSTextField *descriptionText;
-	IBOutlet NSTextField *preStatusText;
-	IBOutlet NSTextField *statusText;
 	IBOutlet NSButton *startButton;
 	IBOutlet NSButton *startupCheckbox;
 }
@@ -54,6 +52,9 @@
 
 // Action to stop the launch service script.
 - (void)stopLauchService;
+
+// Returns true when LazyPoken for this user is running, false if not
+- (BOOL)isRunning;
 
 // Changes the interface fields (YES = show the started state, NO = show the stoped state)
 - (void)runningInterface:(BOOL)running;

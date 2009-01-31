@@ -55,30 +55,24 @@
 		[startButton setTitle:MCLocalizedString(@"STOP_LAZYPOKEN")];
 		[titleText setStringValue:MCLocalizedString(@"LAZYPOKEN_STATUS")];
 		[descriptionText setStringValue:MCLocalizedString(@"STOP_DESCRIPTION")];
-		[preStatusText setStringValue:MCLocalizedString(@"PRE_STATUS")];
-		[statusText setStringValue:MCLocalizedString(@"RUNNING")];
-		[statusText setTextColor:[NSColor colorWithCalibratedRed:0.42 green:0.71 blue:0.26 alpha:1]];
 		[startupCheckbox setTitle:MCLocalizedString(@"START_AT_STARTUP")];		
 	} else {
 		[handImage setImage:stoppedImage];
 		[startButton setTitle:MCLocalizedString(@"START_LAZYPOKEN")];
 		[titleText setStringValue:MCLocalizedString(@"LAZYPOKEN_STATUS")];
 		[descriptionText setStringValue:MCLocalizedString(@"START_DESCRIPTION")];
-		[preStatusText setStringValue:MCLocalizedString(@"PRE_STATUS")];
-		[statusText setStringValue:MCLocalizedString(@"STOPPED")];
-		[statusText setTextColor:[NSColor redColor]];
 		[startupCheckbox setTitle:MCLocalizedString(@"START_AT_STARTUP")];
 	}
 }
 
 - (IBAction)startStopAgent:(id)sender
 {
-	if ([[statusText stringValue] caseInsensitiveCompare:MCLocalizedString(@"STOPPED")] == NSOrderedSame) {
-		[self startLauchService];
-		[self runningInterface:YES];
-	} else {
+	if ([self isRunning]) {
 		[self stopLauchService];
 		[self runningInterface:NO];
+	} else {
+		[self startLauchService];
+		[self runningInterface:YES];
 	}
 }
 
@@ -119,6 +113,23 @@
             }
         }
     }
+}
+
+- (BOOL)isRunning
+{
+	BOOL isRunning = FALSE;
+	NSEnumerator *processEnumerator = [[AGProcess userProcesses] objectEnumerator];
+	AGProcess *process = nil;
+    
+	while (process = [processEnumerator nextObject]) {
+		if ([LPScriptName isEqualToString:[process command]]) {
+			NSDictionary *environment = [process environment];
+			if ([environment valueForKey:LPBUndleTag]) {
+				isRunning = TRUE;
+            }
+        }
+    }
+	return isRunning;
 }
 
 - (BOOL)getLaunchOnStartup

@@ -28,13 +28,6 @@
 // Title string near the top of the window
 "LAZYPOKEN_STATUS" = "LazyPoken Status";
 
-// The string right in front of the colored status word
-"PRE_STATUS" = "De LazyPoken dienst is";
-
-// Colored status texts
-"STOPPED" = "gestopt";
-"RUNNING" = "gestart";
-
 // Long description label in the interface
 "START_DESCRIPTION" = "De LazyPoken dienst is gestopt.\nGebruik de \"Start LazyPoken\" knop om de dienst op te starten.";
 "STOP_DESCRIPTION" = "De LazyPoken dienst is gestart.\nGebruik de \"Stop LazyPoken\" knop om de dienst te beindigen.";
