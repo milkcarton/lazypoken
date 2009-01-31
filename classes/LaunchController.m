@@ -44,7 +44,11 @@
 
 - (void)didMountMethod:(NSNotification *)notification
 {
-	NSLog(@"volume mounted: %@", [notification userInfo]);
+	NSLog(@"Poken volume mounted");
+	NSURL *file = [NSURL fileURLWithPath:@"/Volumes/POKEN/Start_Poken.html"];
+	if ([[NSWorkspace sharedWorkspace] openURL:file]) {
+		NSLog(@"Opened the Poken webpage");
+	}
 }
 
 @end
