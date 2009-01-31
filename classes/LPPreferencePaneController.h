@@ -70,7 +70,4 @@
 // This is used to check if we need to reload the running script after an update
 - (NSString *)getRunningVersion;
 
-// Writes the current version to the defaults to the LPBundleIdentifier instead of the com.apple.systempreferences
-- (void)setRunningVersion;
-
 @end

@@ -26,11 +26,15 @@
 */
 
 #import <Cocoa/Cocoa.h>
+#import "LPGlobalVariables.h"
 
 @interface LPLaunchController : NSObject {
 }
 
 // enter this method when a volume is mounted
 - (void)didMountMethod:(NSNotification *)notification;
+
+// Writes the current version to the defaults to the LPBundleIdentifier instead of the com.apple.systempreferences
+- (void)setRunningVersion;
 
 @end

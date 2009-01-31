@@ -31,11 +31,10 @@
 
 - (void)willSelect
 {	
-	NSString *thisVersion = [[[NSBundle bundleWithIdentifier:LPBundleIdentifier] infoDictionary] valueForKey:@"CFBundleVersion"];
+	NSString *thisVersion = [[[NSBundle bundleForClass:[self class]] infoDictionary] valueForKey:@"CFBundleVersion"];
 	if ([[self getRunningVersion] caseInsensitiveCompare:thisVersion] != 0 && [self isRunning]) {
 		// This is an update, set the new value and restart the agent
 		NSLog(@"Update found, restarting the LazyPoken agent");
-		[self setRunningVersion];
 		[self stopLauchService];
 		[self startLauchService];
 		[self runningInterface:YES];
@@ -103,7 +102,6 @@
     [serviceTask setEnvironment:environment];
 
 	[serviceTask launch];
-	[self setRunningVersion];
 	NSLog(@"Started the LazyPoken agent");
 }
 
@@ -191,15 +189,6 @@
 		CFRelease(ref);
 		
 	return version;
-}
-
-- (void)setRunningVersion
-{
-	CFStringRef version = (CFStringRef)[[[NSBundle bundleWithIdentifier:LPBundleIdentifier] infoDictionary] valueForKey:@"CFBundleVersion"];
-	CFStringRef key = CFSTR("LPRunningVersion");
-	CFStringRef bundleID = (CFStringRef)LPBundleIdentifier;
-	CFPreferencesSetAppValue(key, version, bundleID);
-	CFPreferencesAppSynchronize(bundleID);
 }
 
 @end

@@ -32,7 +32,7 @@
 - (id)init
 {
 	[super init];
-	
+	[self setRunningVersion];
 	NSNotificationCenter *notificationCenter = [[NSWorkspace sharedWorkspace] notificationCenter];
 	SEL didMountMethod = @selector(didMountMethod:);
 	
@@ -49,6 +49,15 @@
 	if ([[NSWorkspace sharedWorkspace] openURL:file]) {
 		NSLog(@"Opened the Poken webpage");
 	}
+}
+
+- (void)setRunningVersion
+{
+	CFStringRef version = (CFStringRef)[[[NSBundle bundleForClass:[self class]] infoDictionary] valueForKey:@"CFBundleVersion"];
+	CFStringRef key = CFSTR("LPRunningVersion");
+	CFStringRef bundleID = (CFStringRef)LPBundleIdentifier;
+	CFPreferencesSetAppValue(key, version, bundleID);
+	CFPreferencesAppSynchronize(bundleID);
 }
 
 @end
