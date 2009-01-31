@@ -43,7 +43,7 @@
 						<object class="NSTextField" id="540695436">
 							<reference key="NSNextResponder" ref="1006"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{156, 183}, {114, 17}}</string>
+							<string key="NSFrame">{{156, 183}, {462, 17}}</string>
 							<reference key="NSSuperview" ref="1006"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="385160498">
@@ -95,7 +95,7 @@
 						<object class="NSTextField" id="787010767">
 							<reference key="NSNextResponder" ref="1006"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{316, 105}, {56, 17}}</string>
+							<string key="NSFrame">{{316, 105}, {136, 17}}</string>
 							<reference key="NSSuperview" ref="1006"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="393262070">
@@ -164,7 +164,7 @@
 						<object class="NSButton" id="899835242">
 							<reference key="NSNextResponder" ref="1006"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{157, 34}, {282, 18}}</string>
+							<string key="NSFrame">{{157, 34}, {460, 18}}</string>
 							<reference key="NSSuperview" ref="1006"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="347965103">
@@ -223,7 +223,7 @@
 						<object class="NSTextField" id="867867034">
 							<reference key="NSNextResponder" ref="1006"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{156, 136}, {282, 28}}</string>
+							<string key="NSFrame">{{156, 136}, {462, 28}}</string>
 							<reference key="NSSuperview" ref="1006"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="179219588">
@@ -308,6 +308,22 @@ dCBMYXp5UG9rZW4iIGJ1dHRvbi4</string>
 						<reference key="destination" ref="867867034"/>
 					</object>
 					<int key="connectionID">71</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">titleText</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="540695436"/>
+					</object>
+					<int key="connectionID">72</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">preStatusText</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="230265559"/>
+					</object>
+					<int key="connectionID">73</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -548,7 +564,7 @@ dCBMYXp5UG9rZW4iIGJ1dHRvbi4</string>
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">71</int>
+			<int key="maxID">73</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -574,15 +590,19 @@ dCBMYXp5UG9rZW4iIGJ1dHRvbi4</string>
 						<object class="NSMutableArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>descriptionText</string>
+							<string>preStatusText</string>
 							<string>startButton</string>
 							<string>startupCheckbox</string>
 							<string>statusText</string>
+							<string>titleText</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>NSTextField</string>
+							<string>NSTextField</string>
 							<string>NSButton</string>
 							<string>NSButton</string>
+							<string>NSTextField</string>
 							<string>NSTextField</string>
 						</object>
 					</object>

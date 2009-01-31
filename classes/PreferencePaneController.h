@@ -35,10 +35,12 @@
 	@private NSTask *serviceTask;
 	@private NSNumber *launchOnStartup;
 	
-	IBOutlet NSButton *startupCheckbox;
-	IBOutlet NSButton *startButton;
+	IBOutlet NSTextField *titleText;
 	IBOutlet NSTextField *descriptionText;
+	IBOutlet NSTextField *preStatusText;
 	IBOutlet NSTextField *statusText;
+	IBOutlet NSButton *startButton;
+	IBOutlet NSButton *startupCheckbox;
 }
 
 // The button decides to start or stop the LazyPoken agent

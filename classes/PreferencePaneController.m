@@ -37,22 +37,31 @@
 	
 	launchOnStartup = [NSNumber numberWithInt:[self getLaunchOnStartup]];
 	[startupCheckbox setState:[launchOnStartup intValue]];
+	
+	// FIXME Check the process status before setting the interface
+	[titleText setStringValue:MCLocalizedString(@"LAZYPOKEN_STATUS")];
+	[startButton setTitle:MCLocalizedString(@"START_LAZYPOKEN")];
+	[descriptionText setStringValue:MCLocalizedString(@"START_DESCRIPTION")];
+	[preStatusText setStringValue:MCLocalizedString(@"PRE_STATUS")];
+	[statusText setStringValue:MCLocalizedString(@"STOPPED")];
+	[statusText setTextColor:[NSColor redColor]];
+	[startupCheckbox setTitle:MCLocalizedString(@"START_AT_STARTUP")];
 }
 
 
 - (IBAction)startStopAgent:(id)sender
 {
-	if ([[statusText stringValue] caseInsensitiveCompare:@"stopped"] == NSOrderedSame) {
+	if ([[statusText stringValue] caseInsensitiveCompare:MCLocalizedString(@"STOPPED")] == NSOrderedSame) {
 		[self startLauchService];
-		[startButton setTitle:@"Stop LazyPoken"];
-		[descriptionText setStringValue:@"The LazyPoken service is running.\nTo stop it, use the \"Stop LazyPoken\" button."];
-		[statusText setStringValue:@"running"];
+		[startButton setTitle:MCLocalizedString(@"STOP_LAZYPOKEN")];
+		[descriptionText setStringValue:MCLocalizedString(@"STOP_DESCRIPTION")];
+		[statusText setStringValue:MCLocalizedString(@"RUNNING")];
 		[statusText setTextColor:[NSColor colorWithCalibratedRed:0.42 green:0.71 blue:0.26 alpha:1]];
 	} else {
 		[self stopLauchService];
-		[startButton setTitle:@"Start LazyPoken"];
-		[descriptionText setStringValue:@"The LazyPoken service is stopped.\nTo start it, use the \"Start LazyPoken\" button."];
-		[statusText setStringValue:@"stopped"];
+		[startButton setTitle:MCLocalizedString(@"START_LAZYPOKEN")];
+		[descriptionText setStringValue:MCLocalizedString(@"START_DESCRIPTION")];
+		[statusText setStringValue:MCLocalizedString(@"STOPPED")];
 		[statusText setTextColor:[NSColor redColor]]; 
 	}
 

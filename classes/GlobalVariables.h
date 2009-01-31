@@ -29,3 +29,8 @@
 #define LPScriptName @"LazyPoken"
 #define LPBundleIdentifier @"be.milkcarton.LazyPoken.prefpane"
 #define LPBUndleTag @"be.milkcarton.LazyPoken.prefpane.tag"
+
+#define MCLocalizedString(key) \
+[[NSBundle bundleForClass:[self class]] localizedStringForKey:(key) value:nil table:@"Localizable"]
+
+// [NSBundle bundleWithIdentifier:@"be.milkcarton.LazyPoken"]
