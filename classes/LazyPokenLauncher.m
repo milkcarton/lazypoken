@@ -26,13 +26,13 @@
 */
 
 #import "SSYLoginItems/SSYLoginItems.h"
-#import "LaunchController.h"
+#import "LPLaunchController.h"
 
 int main (int argc, const char * argv[]) {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 	
 	// Initialize the LaunchController and sets the observers for the volume mount notifications.
-	LaunchController *launchController = [[LaunchController alloc] init];
+	LPLaunchController *launchController = [[LPLaunchController alloc] init];
 	// Create a loop to a date in the far future.
 	while ([[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]]);
 	

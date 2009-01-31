@@ -25,9 +25,9 @@
  Created by Jelle Vandebeeck on 2009.01.25.
 */
 
-#import "LaunchController.h"
+#import "LPLaunchController.h"
 
-@implementation LaunchController
+@implementation LPLaunchController
 
 - (id)init
 {

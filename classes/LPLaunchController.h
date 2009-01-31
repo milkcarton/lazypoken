@@ -27,7 +27,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface LaunchController : NSObject {
+@interface LPLaunchController : NSObject {
 }
 
 // enter this method when a volume is mounted

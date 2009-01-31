@@ -25,9 +25,9 @@
  Created by Jelle Vandebeeck on 2009.01.25.
 */
 
-#import "PreferencePaneController.h"
+#import "LPPreferencePaneController.h"
 
-@implementation PreferencePaneController
+@implementation LPPreferencePaneController
 
 - (void)willSelect
 {	

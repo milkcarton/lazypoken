@@ -28,11 +28,11 @@
 #import <Cocoa/Cocoa.h>
 #import <Sparkle/Sparkle.h>
 #import <PreferencePanes/PreferencePanes.h>
-#import "GlobalVariables.h"
+#import "LPGlobalVariables.h"
 #import "AGProcess.h"
 #import "SSYLoginItems.h"
 
-@interface PreferencePaneController : NSPreferencePane {
+@interface LPPreferencePaneController : NSPreferencePane {
 	@private NSTask *serviceTask;
 	@private NSNumber *launchOnStartup;
 	@private NSImage *runningImage;
