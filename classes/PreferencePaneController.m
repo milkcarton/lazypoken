@@ -44,8 +44,7 @@
 	launchOnStartup = [NSNumber numberWithInt:[self getLaunchOnStartup]];
 	[startupCheckbox setState:[launchOnStartup intValue]];
 	
-	// FIXME Check the process status before setting the interface
-	[self runningInterface:NO];
+	[self runningInterface:[self isRunning]];
 }
 
 - (void)runningInterface:(BOOL)running
