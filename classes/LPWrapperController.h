@@ -23,10 +23,10 @@
  OTHER DEALINGS IN THE SOFTWARE.
  
  Created by Jelle Vandebeeck on 2009.01.31.
- */
+*/
 
 #import <Cocoa/Cocoa.h>
-#import "GlobalVariables.h"
+#import "LPGlobalVariables.h"
 
 @interface LPWrapperController : NSObject {
 

@@ -23,7 +23,7 @@
  OTHER DEALINGS IN THE SOFTWARE.
  
  Created by Jelle Vandebeeck on 2009.01.31.
- */
+*/
 
 #import "LPWrapperController.h"
 

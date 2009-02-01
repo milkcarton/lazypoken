@@ -163,6 +163,7 @@
 	NSMutableString *scriptPath = [NSMutableString stringWithString:[[NSBundle bundleWithIdentifier:LPBundleIdentifier] resourcePath]];
 	[scriptPath appendString:@"/"];
 	[scriptPath appendString:LPScriptName];
+	[scriptPath appendString:@".app"];
 	
 	if ([sender state]) {
 		[SSYLoginItems addLoginURL:[NSURL fileURLWithPath:scriptPath] hidden:[NSNumber numberWithBool:TRUE] error:&error];
