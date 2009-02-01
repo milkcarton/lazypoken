@@ -25,6 +25,7 @@
 		F43845B30F360FEA00C424E2 /* LazyPokenWrapperLauncher.m in Sources */ = {isa = PBXBuildFile; fileRef = F43845B20F360FEA00C424E2 /* LazyPokenWrapperLauncher.m */; };
 		F43845B60F36100100C424E2 /* LPWrapperController.m in Sources */ = {isa = PBXBuildFile; fileRef = F43845B50F36100100C424E2 /* LPWrapperController.m */; };
 		F43845D10F3610D500C424E2 /* LazyPokenWrapper-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F43845D00F3610D500C424E2 /* LazyPokenWrapper-Info.plist */; };
+		F43846020F36148C00C424E2 /* hand.icns in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60E01C3C0F2B86EB00931EF9 /* hand.icns */; };
 		F456FCF60F2BD10D00421820 /* hand64.png in Resources */ = {isa = PBXBuildFile; fileRef = F456FCF50F2BD10D00421820 /* hand64.png */; };
 		F476F8330F33CE8D00AD17CF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F476F8320F33CE8D00AD17CF /* Localizable.strings */; };
 		F48A6F880F2BF38200FE4F9C /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F48A6F860F2BF38200FE4F9C /* LICENSE */; };
@@ -69,6 +70,16 @@
 			dstSubfolderSpec = 10;
 			files = (
 				F40AE06D0F30C9E6009B59E1 /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F43846070F36149B00C424E2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				F43846020F36148C00C424E2 /* hand.icns in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +331,7 @@
 				F438457F0F360EBE00C424E2 /* Resources */,
 				F43845800F360EBE00C424E2 /* Sources */,
 				F43845810F360EBE00C424E2 /* Frameworks */,
+				F43846070F36149B00C424E2 /* CopyFiles */,
 			);
 			buildRules = (
 			);
