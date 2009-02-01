@@ -48,7 +48,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 60E01BBA0F2B7E1800931EF9 /* LazyPoken */;
+			remoteGlobalIDString = 60E01BBA0F2B7E1800931EF9;
 			remoteInfo = LazyPoken;
 		};
 /* End PBXContainerItemProxy section */

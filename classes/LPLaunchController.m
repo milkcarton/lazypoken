@@ -44,7 +44,12 @@
 
 - (void)didMountMethod:(NSNotification *)notification
 {
-	if ([[[notification userInfo] valueForKey:@"NSDevicePath"] compare:LPVolumeName] == NSOrderedSame) {
+	CFBooleanRef userIsActive; 
+	CFDictionaryRef sessionInfoDict; 
+	sessionInfoDict = CGSessionCopyCurrentDictionary(); 
+	userIsActive = CFDictionaryGetValue(sessionInfoDict, kCGSessionOnConsoleKey); 
+	
+	if (CFBooleanGetValue(userIsActive) && [[[notification userInfo] valueForKey:@"NSDevicePath"] compare:LPVolumeName] == NSOrderedSame) {
 		NSLog(@"Poken volume mounted");
 		NSURL *file = [NSURL fileURLWithPath:@"/Volumes/POKEN/Start_Poken.html"];
 		if ([[NSWorkspace sharedWorkspace] openURL:file]) {
