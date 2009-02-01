@@ -24,6 +24,7 @@
 		F438458C0F360EF800C424E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E01C220F2B82FB00931EF9 /* Foundation.framework */; };
 		F43845B30F360FEA00C424E2 /* LazyPokenWrapperLauncher.m in Sources */ = {isa = PBXBuildFile; fileRef = F43845B20F360FEA00C424E2 /* LazyPokenWrapperLauncher.m */; };
 		F43845B60F36100100C424E2 /* LPWrapperController.m in Sources */ = {isa = PBXBuildFile; fileRef = F43845B50F36100100C424E2 /* LPWrapperController.m */; };
+		F43845D10F3610D500C424E2 /* LazyPokenWrapper-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F43845D00F3610D500C424E2 /* LazyPokenWrapper-Info.plist */; };
 		F456FCF60F2BD10D00421820 /* hand64.png in Resources */ = {isa = PBXBuildFile; fileRef = F456FCF50F2BD10D00421820 /* hand64.png */; };
 		F476F8330F33CE8D00AD17CF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F476F8320F33CE8D00AD17CF /* Localizable.strings */; };
 		F48A6F880F2BF38200FE4F9C /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F48A6F860F2BF38200FE4F9C /* LICENSE */; };
@@ -105,6 +106,7 @@
 		F43845B20F360FEA00C424E2 /* LazyPokenWrapperLauncher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LazyPokenWrapperLauncher.m; path = classes/LazyPokenWrapperLauncher.m; sourceTree = "<group>"; };
 		F43845B40F36100100C424E2 /* LPWrapperController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LPWrapperController.h; path = classes/LPWrapperController.h; sourceTree = "<group>"; };
 		F43845B50F36100100C424E2 /* LPWrapperController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LPWrapperController.m; path = classes/LPWrapperController.m; sourceTree = "<group>"; };
+		F43845D00F3610D500C424E2 /* LazyPokenWrapper-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "LazyPokenWrapper-Info.plist"; sourceTree = "<group>"; };
 		F456FCF50F2BD10D00421820 /* hand64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hand64.png; path = resources/hand64.png; sourceTree = "<group>"; };
 		F476F8340F33CE9200AD17CF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = resources/en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F476F88E0F33D2D800AD17CF /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = resources/nl.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				F4E7F2350F342EC100B130E8 /* hand64running.png */,
 				F456FCF50F2BD10D00421820 /* hand64.png */,
 				8D5B49B7048680CD000E48DA /* Info.plist */,
+				F43845D00F3610D500C424E2 /* LazyPokenWrapper-Info.plist */,
 				F476F8320F33CE8D00AD17CF /* Localizable.strings */,
 			);
 			name = Resources;
@@ -376,6 +379,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F43845D10F3610D500C424E2 /* LazyPokenWrapper-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
