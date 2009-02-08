@@ -22,20 +22,20 @@
  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
  OTHER DEALINGS IN THE SOFTWARE.
  
- Created by Simon Schoeters on 2008.01.31.
+ Created by Simon Schoeters on 2008.02.08.
 */
 
 
 // Title string near the top of the window
-"LAZYPOKEN_STATUS" = "LazyPoken Status";
+"LAZYPOKEN_STATUS" = "LazyPoken Stato";
 
 // Long description label in the interface
-"START_DESCRIPTION" = "The LazyPoken service is stopped.\nTo start it, use the \"Start LazyPoken\" button.";
-"STOP_DESCRIPTION" = "The LazyPoken service is running.\nTo stop it, use the \"Stop LazyPoken\" button.";
+"START_DESCRIPTION" = "Il LazyPoken servizio si e’ fermato.\nPer avviare il sevizio, ustate il bottone \"Start LazyPoken\".";
+"STOP_DESCRIPTION" = "Il LazyPoken servizio si e’ funziona.\nPer fermare il sevizio, ustate il bottone \"Stop LazyPoken\".";
 
 // Start stop button
 "START_LAZYPOKEN" = "Start LazyPoken";
 "STOP_LAZYPOKEN" = "Stop LazyPoken";
 
 // Checkbox near the bottom of the window
-"START_AT_STARTUP" = "Automatically start LazyPoken on startup";
+"START_AT_STARTUP" = "Avviare automaticamente quando accendete il computer";

@@ -27,9 +27,9 @@
 		F43845D10F3610D500C424E2 /* LazyPokenWrapper-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F43845D00F3610D500C424E2 /* LazyPokenWrapper-Info.plist */; };
 		F43846020F36148C00C424E2 /* hand.icns in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60E01C3C0F2B86EB00931EF9 /* hand.icns */; };
 		F456FCF60F2BD10D00421820 /* hand64.png in Resources */ = {isa = PBXBuildFile; fileRef = F456FCF50F2BD10D00421820 /* hand64.png */; };
-		F476F8330F33CE8D00AD17CF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F476F8320F33CE8D00AD17CF /* Localizable.strings */; };
 		F48A6F880F2BF38200FE4F9C /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F48A6F860F2BF38200FE4F9C /* LICENSE */; };
 		F48A6F890F2BF38200FE4F9C /* NOTICE in Resources */ = {isa = PBXBuildFile; fileRef = F48A6F870F2BF38200FE4F9C /* NOTICE */; };
+		F491252F0F3F2EC0001323D6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F491252D0F3F2EC0001323D6 /* Localizable.strings */; };
 		F4D381B60F336DE5009A1DF9 /* AGProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D381B40F336DE5009A1DF9 /* AGProcess.m */; };
 		F4D381B70F336DE5009A1DF9 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = F4D381B50F336DE5009A1DF9 /* README.txt */; };
 		F4E7F2360F342EC100B130E8 /* hand64stopped.png in Resources */ = {isa = PBXBuildFile; fileRef = F4E7F2340F342EC100B130E8 /* hand64stopped.png */; };
@@ -119,10 +119,11 @@
 		F43845B50F36100100C424E2 /* LPWrapperController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LPWrapperController.m; path = classes/LPWrapperController.m; sourceTree = "<group>"; };
 		F43845D00F3610D500C424E2 /* LazyPokenWrapper-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "LazyPokenWrapper-Info.plist"; sourceTree = "<group>"; };
 		F456FCF50F2BD10D00421820 /* hand64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hand64.png; path = resources/hand64.png; sourceTree = "<group>"; };
-		F476F8340F33CE9200AD17CF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = resources/en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		F476F88E0F33D2D800AD17CF /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = resources/nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F48A6F860F2BF38200FE4F9C /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		F48A6F870F2BF38200FE4F9C /* NOTICE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NOTICE; sourceTree = "<group>"; };
+		F491252E0F3F2EC0001323D6 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F49125300F3F2ED1001323D6 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F49125310F3F2EEA001323D6 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F4D381B30F336DE5009A1DF9 /* AGProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGProcess.h; sourceTree = "<group>"; };
 		F4D381B40F336DE5009A1DF9 /* AGProcess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGProcess.m; sourceTree = "<group>"; };
 		F4D381B50F336DE5009A1DF9 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
@@ -192,6 +193,7 @@
 		089C167CFE841241C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F491252D0F3F2EC0001323D6 /* Localizable.strings */,
 				F48A6F860F2BF38200FE4F9C /* LICENSE */,
 				F48A6F870F2BF38200FE4F9C /* NOTICE */,
 				60E01C3C0F2B86EB00931EF9 /* hand.icns */,
@@ -200,7 +202,6 @@
 				F456FCF50F2BD10D00421820 /* hand64.png */,
 				8D5B49B7048680CD000E48DA /* Info.plist */,
 				F43845D00F3610D500C424E2 /* LazyPokenWrapper-Info.plist */,
-				F476F8320F33CE8D00AD17CF /* Localizable.strings */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -358,6 +359,7 @@
 				German,
 				en,
 				nl,
+				it,
 			);
 			mainGroup = 089C166AFE841209C02AAC07 /* LazyPoken */;
 			projectDirPath = "";
@@ -381,9 +383,9 @@
 				F48A6F880F2BF38200FE4F9C /* LICENSE in Resources */,
 				F48A6F890F2BF38200FE4F9C /* NOTICE in Resources */,
 				F4D381B70F336DE5009A1DF9 /* README.txt in Resources */,
-				F476F8330F33CE8D00AD17CF /* Localizable.strings in Resources */,
 				F4E7F2360F342EC100B130E8 /* hand64stopped.png in Resources */,
 				F4E7F2370F342EC100B130E8 /* hand64running.png in Resources */,
+				F491252F0F3F2EC0001323D6 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,11 +445,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F476F8320F33CE8D00AD17CF /* Localizable.strings */ = {
+		F491252D0F3F2EC0001323D6 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F476F8340F33CE9200AD17CF /* en */,
-				F476F88E0F33D2D800AD17CF /* nl */,
+				F491252E0F3F2EC0001323D6 /* en */,
+				F49125300F3F2ED1001323D6 /* it */,
+				F49125310F3F2EEA001323D6 /* nl */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

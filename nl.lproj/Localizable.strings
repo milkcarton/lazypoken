@@ -30,12 +30,12 @@
 "LAZYPOKEN_STATUS" = "LazyPoken Status";
 
 // Long description label in the interface
-"START_DESCRIPTION" = "The LazyPoken service is stopped.\nTo start it, use the \"Start LazyPoken\" button.";
-"STOP_DESCRIPTION" = "The LazyPoken service is running.\nTo stop it, use the \"Stop LazyPoken\" button.";
+"START_DESCRIPTION" = "De LazyPoken dienst is gestopt.\nGebruik de \"Start LazyPoken\" knop om de dienst op te starten.";
+"STOP_DESCRIPTION" = "De LazyPoken dienst is gestart.\nGebruik de \"Stop LazyPoken\" knop om de dienst te beindigen.";
 
 // Start stop button
 "START_LAZYPOKEN" = "Start LazyPoken";
 "STOP_LAZYPOKEN" = "Stop LazyPoken";
 
 // Checkbox near the bottom of the window
-"START_AT_STARTUP" = "Automatically start LazyPoken on startup";
+"START_AT_STARTUP" = "Start LazyPoken automatisch bij het opstarten";
