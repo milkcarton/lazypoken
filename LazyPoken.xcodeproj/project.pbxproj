@@ -129,6 +129,9 @@
 		F4D381B50F336DE5009A1DF9 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		F4E7F2340F342EC100B130E8 /* hand64stopped.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hand64stopped.png; path = resources/hand64stopped.png; sourceTree = "<group>"; };
 		F4E7F2350F342EC100B130E8 /* hand64running.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hand64running.png; path = resources/hand64running.png; sourceTree = "<group>"; };
+		F4E9D1A10F44AAC4007E4291 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F4E9D1A20F44AB5D007E4291 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F4E9D1A30F44AB6F007E4291 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -360,6 +363,9 @@
 				en,
 				nl,
 				it,
+				ru,
+				fr,
+				de,
 			);
 			mainGroup = 089C166AFE841209C02AAC07 /* LazyPoken */;
 			projectDirPath = "";
@@ -451,6 +457,9 @@
 				F491252E0F3F2EC0001323D6 /* en */,
 				F49125300F3F2ED1001323D6 /* it */,
 				F49125310F3F2EEA001323D6 /* nl */,
+				F4E9D1A10F44AAC4007E4291 /* ru */,
+				F4E9D1A20F44AB5D007E4291 /* fr */,
+				F4E9D1A30F44AB6F007E4291 /* de */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
