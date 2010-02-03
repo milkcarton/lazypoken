@@ -166,7 +166,7 @@
 	[scriptPath appendString:LPScriptName];
 	[scriptPath appendString:@".app"];
 	
-	if ([sender state]) {
+	if ([(NSCell *)sender state]) {
 		[SSYLoginItems addLoginURL:[NSURL fileURLWithPath:scriptPath] hidden:[NSNumber numberWithBool:TRUE] error:&error];
 	} else {
 		[SSYLoginItems removeLoginURL:[NSURL fileURLWithPath:scriptPath] error:&error];

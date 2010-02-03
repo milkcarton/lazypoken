@@ -600,7 +600,7 @@ AGGetMachTaskEvents(task_t task, int *faults, int *pageins, int *cow_faults, int
 			int i;
 			for (i = [args count] - 1; i >= (argumentCount - 1); i--) {
 				NSString *string = [args objectAtIndex:i];
-				int index = [string rangeOfString:@"="].location;
+				NSInteger index = [string rangeOfString:@"="].location;
 				if (index != NSNotFound)
 					[env setObject:[string substringFromIndex:index + 1] forKey:[string substringToIndex:index]];
 			}
@@ -610,7 +610,7 @@ AGGetMachTaskEvents(task_t task, int *faults, int *pageins, int *cow_faults, int
 			int i;
 			for (i = [args count] - 1; i >= 0; i--) {
 				NSString *string = [args objectAtIndex:i];
-				int index = [string rangeOfString:@"="].location;
+				NSInteger index = [string rangeOfString:@"="].location;
 				if (index == NSNotFound)
 					break;
 				[env setObject:[string substringFromIndex:index + 1] forKey:[string substringToIndex:index]];
@@ -929,7 +929,7 @@ AGGetMachTaskEvents(task_t task, int *faults, int *pageins, int *cow_faults, int
 	return count;
 } 
 	
-- (unsigned)hash {
+- (NSUInteger)hash {
 	return process;
 }
 	

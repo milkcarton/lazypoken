@@ -23,7 +23,7 @@
 	<key>NSMainNibFile</key>
 	<string>PreferencePane</string>
 	<key>NSPrincipalClass</key>
-	<string></string>
+	<string>LPPreferencePaneController</string>
 	<key>SUFeedURL</key>
 	<string>http://feeds.feedburner.com/milkcarton/lazypoken</string>
 </dict>

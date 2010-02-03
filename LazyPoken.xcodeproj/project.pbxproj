@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -118,7 +118,7 @@
 		F4044ED2111A0B2100E5FE17 /* ru */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F4044ED3111A0B2E00E5FE17 /* it */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F40AE0470F30C969009B59E1 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = frameworks/Sparkle.framework; sourceTree = "<group>"; };
-		F43845830F360EBE00C424E2 /* LazyPokenApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyPokenApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F43845830F360EBE00C424E2 /* LazyPoken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyPoken.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43845850F360EBE00C424E2 /* LazyPokenApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LazyPokenApp-Info.plist"; sourceTree = "<group>"; };
 		F43845B20F360FEA00C424E2 /* LazyPokenWrapperLauncher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LazyPokenWrapperLauncher.m; path = classes/LazyPokenWrapperLauncher.m; sourceTree = "<group>"; };
 		F43845B40F36100100C424E2 /* LPWrapperController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LPWrapperController.h; path = classes/LPWrapperController.h; sourceTree = "<group>"; };
@@ -250,7 +250,7 @@
 			children = (
 				8D5B49B6048680CD000E48DA /* LazyPoken.prefpane */,
 				60E01CE90F2B93B900931EF9 /* LazyPoken */,
-				F43845830F360EBE00C424E2 /* LazyPokenApp.app */,
+				F43845830F360EBE00C424E2 /* LazyPoken.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -344,7 +344,7 @@
 			);
 			name = LazyPokenApp;
 			productName = LazyPokenApp;
-			productReference = F43845830F360EBE00C424E2 /* LazyPokenApp.app */;
+			productReference = F43845830F360EBE00C424E2 /* LazyPoken.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -353,7 +353,7 @@
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "LazyPoken" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 3.2";
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -511,7 +511,7 @@
 		1DEB913F08733D840010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -525,7 +525,7 @@
 		1DEB914008733D840010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;

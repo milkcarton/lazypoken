@@ -49,7 +49,8 @@
 	sessionInfoDict = CGSessionCopyCurrentDictionary(); 
 	userIsActive = CFDictionaryGetValue(sessionInfoDict, kCGSessionOnConsoleKey); 
 	
-	if (CFBooleanGetValue(userIsActive) && [[[notification userInfo] valueForKey:@"NSDevicePath"] compare:LPVolumeName] == NSOrderedSame) {
+	NSString *path = [[notification userInfo] valueForKey:@"NSDevicePath"];
+	if (CFBooleanGetValue(userIsActive) && [path compare:LPVolumeName] == NSOrderedSame) {
 		NSLog(@"Poken volume mounted");
 		NSURL *file = [NSURL fileURLWithPath:@"/Volumes/POKEN/Start_Poken.html"];
 		if ([[NSWorkspace sharedWorkspace] openURL:file]) {
