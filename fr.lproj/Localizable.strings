@@ -30,7 +30,7 @@
 "LAZYPOKEN_STATUS" = "LazyPoken Status";
 
 // Long description label in the interface
-"START_DESCRIPTION" = "Le service LazyPoken est terminé.\nAppuie sur \"Start LazyPoken\" pour lancer le service.";
+"START_DESCRIPTION" = "Le service LazyPoken est terminÃ©.\nAppuie sur \"Start LazyPoken\" pour lancer le service.";
 "START_DESCRIPTION" = "Le service LazyPoken est actif.\nAppuie sur \"Stop LazyPoken\" pour terminer le service.";
 
 // Start stop button

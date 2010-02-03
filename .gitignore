@@ -1,0 +1,10 @@
+# Xcode
+build/*
+LazyPoken.xcodeproj/simon*
+LazyPoken.xcodeproj/jelle*
+
+# Backup
+*~
+
+# Mac
+.DS_Store
